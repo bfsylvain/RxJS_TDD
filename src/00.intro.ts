@@ -44,8 +44,6 @@ export const fibonacciObservable = new Observable(function (observer) {
         prevNumber = actualNumber
         actualNumber = newNumber
         newNumber = actualNumber + prevNumber
-        if(i >= numberOfRepeats-1) {
-            observer.complete()
-        }
     }
+    observer.complete()
 });
